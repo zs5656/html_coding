@@ -1,0 +1,45 @@
+/* Note for CSS .<name> refers to the class of an object while #<name> refers to the ID*/
+
+blockquote {
+    font-style: italic;
+    /* font-size: 20px; */
+}
+
+span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    color: red;
+}
+
+header {
+    margin: 0 0 60px 0;
+}
+
+div#main-body {
+    width:750px; 
+    margin:20px auto; 
+    padding:30px;
+}
+
+img#img1 {
+    float:left; 
+    margin:0 40px 0 0;
+    height:200px;
+}
+
+img#img2 {
+    display:block; 
+    margin: 0 auto 0 auto;
+    width:150px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+blockquote#style1 {
+    padding: 2px 20px; 
+    background-color: grey; 
+    text-align:center;
+}
