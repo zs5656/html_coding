@@ -2,33 +2,44 @@
 <head>
     <title>Goosander Cottage</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style1.css">
+<style>
+    blockquote {
+        font-style: italic;
+        /* font-size: 20px; */
+    }
+
+    span {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        color: red;
+    }
+</style>
 </head>
 
 <body>
-    <header>
-        <h1>Goosander Cottage</h1>
-        <h2>Why does this exist lmfao</h2>
+    <header style="margin: 0 0 60px 0">
+        <h1 style="text-align: center";>Goosander Cottage</h1>
+        <h2 style="text-align: center";>Why does this exist lmfao</h2>
     </header>
 
-    <div>
+    <div style="width:750px; margin:20px auto; padding:30px">
+        <a href="https://www.stablewoodcoastalcottages.com/book-a-cottage/goosander-cottage/">
+            <img src="images/goosander.png" height="200px" alt="Goosander Cottage" style="float:left; margin:0 40px 0 0">
+        </a>
+        <!--Margins: Above, right, bottom, down clockwise from the top-->
+
         <p>
             The Goosander Cottage is a fictional structure about which little is known due to its highly secretive nature. We present below a short and affectionately irrelevant summary on the knowledge of the Goosander Cottage.
         </p>
-    </div>
 
-    <a href="https://www.stablewoodcoastalcottages.com/book-a-cottage/goosander-cottage/">
-        <img src="goosander.png" width="50%" height="50%" alt="Goosander Cottage">
-    </a>
-
-    <div>
         <blockquote>
-            <p><span>In the official documentation, "Musers" is listed as the Paramount Leader of the Goosander Cottage, with "oCacti" posessing the role of the Supreme Leader's Advisor.<br>- Goosander Cottage Official Document c. 2022</span></p>
-        </blockquote>
+            <p>"Musers (our supreme leader), oCacti (our supreme advisor), Phage1020 (stupid idiotic goose-like creature)..."<br><span>- Goosander Cottage Official Document c. 2022</span></p>
+        </blockquote><br>
 
         <h4>Ordered list goes here</h4>
         <ol>
-            <li>Ordered list</li>
-            <li>Ordered list</li>
             <li>Ordered list</li>
             <li>Ordered list</li>
         </ol>
@@ -40,6 +51,13 @@
             <li>Unordered list</li>
             <li>Unordered list</li>
         </ul>
+
+        <h4 style="text-align:center">Centered Image</h4>
+        <!--In order to insert an automatic margin on L and R, use auto
+        Auto only works on block elements but img is inline. Use display:block to ovveride-->
+        <img src="images/goosander2.png" style="display:block; margin: 0 auto 0 auto" width="150px">
+
+        <blockquote style="padding: 2px 20px; background-color: grey; text-align:center">"when I say something is useless, I don't mean it's useless" - Musers 2022</blockquote>
 
     </div>
 </body>
