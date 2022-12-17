@@ -1,0 +1,15 @@
+div {
+    border: 1px solid black;
+}
+
+.bio-box a {
+    color: green;
+}
+
+a {
+    color: red;
+}
+
+.alert {
+    background: red;
+}

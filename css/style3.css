@@ -1,0 +1,31 @@
+div {
+    border: 1px solid black;
+}
+
+a.red {
+    color:red;
+}
+
+a.green {
+    color:green;
+}
+
+/* Target ID using # */
+#exec-bio {
+    background-color: red;
+}
+
+/* Also notice how the more SPECIFIC tag overrides the less specific one? :)*/
+.bio-box#exec-bio {
+    background-color: grey;
+}
+
+/* Target the class using . */
+.bio-box {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.alert {
+    background-color: pink;
+}
