@@ -1,15 +1,69 @@
-div {
-    border: 1px solid black;
+/* GLOBAL STYLE */
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-.bio-box a {
-    color: green;
+h1 {
+    font-size: 2.25rem;
+    margin-top: 0;
 }
 
 a {
-    color: red;
+    color: #f00;
 }
 
-.alert {
-    background: red;
+h2 {
+    font-size: 30px;
 }
+
+blockquote {
+    padding: 2px 20px; 
+    background-color: grey; 
+    text-align:center;
+}
+
+/* HERO STYLES */
+.full-hero {
+    background-color: #c7dbfc;
+    height: 50vw;
+    width: 50vw
+}
+
+
+/* SOCIAL STYLE */
+.social-link {
+    /* Use RGBa to set transparency. 0 is transparent and 1 is opaque */
+    background: rgba(150, 150, 150, 0.5);
+    color: #0000ff;
+    /* display: none; */
+    height: 36px;
+    width: 36px;
+    display: inline-block;
+}
+
+/* BIO STYLES */
+.bio-wrapper {
+    font-size: 24px;
+}
+
+.bio-box {
+    border: 1px solid #000;
+    width: 50%;
+    font-size: 1rem;
+    padding: 0.5em;
+}
+
+.bio-box h3 {
+    font-size: 1.5em;
+}
+
+.bio-copy {
+    font-size: 1em;
+}
+
+.bio-copy a {
+    color: #060;
+}
+
+
