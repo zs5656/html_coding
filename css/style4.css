@@ -26,12 +26,22 @@ blockquote {
 /* HERO STYLES */
 .full-hero {
     background-color: #c7dbfc;
-    height: 50vw;
-    width: 50vw
+    padding: 5vh;
+    display: inline-block;
+    width: 100vw;
 }
 
-
 /* SOCIAL STYLE */
+.social-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.social-list > li {
+    display: inline-block;
+}
+
 .social-link {
     /* Use RGBa to set transparency. 0 is transparent and 1 is opaque */
     background: rgba(150, 150, 150, 0.5);
@@ -44,18 +54,32 @@ blockquote {
 
 /* BIO STYLES */
 .bio-wrapper {
+    background-color: #c7dbfc;
     font-size: 24px;
+    overflow: hidden;
+    /* Overflow hidden clears the float so text doesnt cascade down the blocks */
 }
 
 .bio-box {
     border: 1px solid #000;
     width: 50%;
     font-size: 1rem;
-    padding: 0.5em;
+    margin: 40px 1%;
+    padding: 2%;
+    float: left;
+    width: 23%;
+    box-sizing: border-box;
+}
+
+.bio-box img {
+    width: 100%;
 }
 
 .bio-box h3 {
     font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+    margin: -40px 0 1em 0;
 }
 
 .bio-copy {
