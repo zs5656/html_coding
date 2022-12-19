@@ -1,0 +1,16 @@
+.test-box {
+    background: #9db6dd;
+    width: 200px;
+    border: 1px solid black;
+    margin: 50px;
+}
+
+.test-box-nosizing {
+    border: 10px solid black;
+    padding: 40px;
+}
+
+.test-box-sizing {
+    box-sizing: border-box;
+    /* Places the padding and borders INSIDE of the defined witdth. */
+}
