@@ -1,7 +1,13 @@
+
+
 /* GLOBAL STYLE */
 html, body {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: helvetica, arial, sans;
 }
 
 h1 {
@@ -18,6 +24,7 @@ h2 {
 }
 
 blockquote {
+    margin-top: 0.5em;
     padding: 2px 20px; 
     background-color: grey; 
     text-align:center;
@@ -80,6 +87,11 @@ blockquote {
     float: left;
     width: 23%;
     box-sizing: border-box;
+}
+
+.bio-box .social-link {
+    display: block;
+    margin: 2em 0 1em;
 }
 
 .bio-box img {
