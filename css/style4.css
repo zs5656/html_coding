@@ -54,6 +54,12 @@ blockquote {
     margin-left: 1em;
 }
 
+/* Apply these rules to any li next to intial li in element with class header-nav. */
+.header-nav > li ~ li {
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    padding-left: 1em;
+}
+
 .header-nav a {
     text-decoration: none;
     color: #000;
@@ -69,18 +75,15 @@ blockquote {
 
 .header-nav a:hover, 
 .header-nav a:active {
-    color: #ed6e2f;
+    color: red;
     opacity: 0.5;
 }
 
 /* Target the first link using the first-child */
 
-.header-nav > li:first-child a {
-    color: #F99300;
-}
-
+.header-nav > li:first-child a,
 .header-nav > li:last-child a {
-    color: #0444FE; 
+    color: red;
 }
 
 .header-nav > li:first-child a:hover,
@@ -89,9 +92,6 @@ blockquote {
 .header-nav > li:last-child a:active {
     color: #000;
 }
-
-
-
 
 /* INFO STYLE */
 .info-wrapper {
