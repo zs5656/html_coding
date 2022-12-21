@@ -32,6 +32,26 @@ blockquote {
 }
 
 /* SOCIAL STYLE */
+
+.social-link {
+    /* Use RGBa to set transparency. 0 is transparent and 1 is opaque */
+    background: rgba(150, 150, 150, 0.5);
+    border-radius: 99px;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    font-family: helvetica, arial, sans;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 2.5em;
+    line-height: 1;
+    padding-top: 0.85em; 
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 2.5em;
+}
+
 .social-list {
     list-style: none;
     padding: 0;
@@ -40,16 +60,7 @@ blockquote {
 
 .social-list > li {
     display: inline-block;
-}
-
-.social-link {
-    /* Use RGBa to set transparency. 0 is transparent and 1 is opaque */
-    background: rgba(150, 150, 150, 0.5);
-    color: #0000ff;
-    /* display: none; */
-    height: 36px;
-    width: 36px;
-    display: inline-block;
+    margin: 0 0.5em;
 }
 
 /* BIO STYLES */
@@ -84,6 +95,7 @@ blockquote {
 
 .bio-copy {
     font-size: 1em;
+    line-height: 1.5;
 }
 
 .bio-copy a {
