@@ -30,6 +30,24 @@ blockquote {
     text-align:center;
 }
 
+.header-nav {
+    float: right;
+    padding: 5vh 60px 0 0;
+}
+
+.header-nav > li {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 /* HERO STYLES */
 .full-hero {
     background-color: #c7dbfc;
