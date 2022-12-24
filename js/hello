@@ -1,2 +1,4 @@
 #!/c/PROGRA~1/nodejs/node
+//this line lets me run the file in cmd line woo
+
 console.log("Hello World");
