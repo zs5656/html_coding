@@ -2,3 +2,18 @@
 //this line lets me run the file in cmd line woo
 
 console.log("Hello World");
+let x = ""
+let y = "d"
+
+// IN a boolean context, !"x" returns false while !"" returns true
+if (!x && !y) {
+    console.log("Both Strings are empty")
+} else {
+    console.log("At least one of the strings is not empty")
+}
+
+if (!x) {
+    console.log("x is empty")
+} else {
+    console.log("x is not empty")
+}
