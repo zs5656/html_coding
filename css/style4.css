@@ -4,6 +4,11 @@ html, body {
     padding: 0;
 }
 
+html {
+    box-shadow: 0 0 0 30px #000 inset;
+    padding: 0 30px;
+}
+
 body {
     font-family: helvetica, arial, sans;
 }
@@ -45,28 +50,37 @@ blockquote {
 
 /* HEADER STUFF */
 .header {
-    background-color: #aaa;
-    height: 300px;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
     width: 100%;
-    position: relative;
+    z-index: 20;
 }
 
-/* absolutely positioned positions it XXpx from the (side) */
 .header-logo {
     background-color: #000;
-    height: 110px;
-    width: 110px;
-    left: 50%;
-    top: 50%;
+    box-sizing: border-box;
+    display: block;
+    height: 10vh;
+    padding-top: 10px;
+    left: -30px;
+    position: relative;
+    text-align: center;
+    width: 10vh;
+  }
 
-    /*Negative margins to put the thing in the right spot*/
-    margin: -55px 0 0 -55px;
-    position: absolute;
+.header-logo:hover,
+.header-logo:active {
+    opacity: 0.25;
+}
+
+.header-logo img {
+    width: 4.3vh;
 }
 
 .header-nav {
     float: right;
-    padding: 5vh 60px 0 0;
+    padding: 5.5vh 60px 0 0;
 }
 
 .header-nav > li {
@@ -76,22 +90,16 @@ blockquote {
 
 /* Apply these rules to any li next to intial li in element with class header-nav. */
 .header-nav > li ~ li {
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
     padding-left: 1em;
 }
 
-
 .header-nav a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-.header-logo:hover,
-.header-logo:active {
-    opacity: 0.25;
 }
 
 .header-nav a:hover, 
@@ -111,7 +119,29 @@ blockquote {
 .header-nav > li:first-child a:active,
 .header-nav > li:last-child a:hover,
 .header-nav > li:last-child a:active {
-    color: #000;
+    color: #fff;
+}
+
+/* FOOTER STYLE */
+.footer {
+    background-color: #000;
+    padding: 10vh 0 15vh;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 50px;
+}
+
+.footer h3 {
+    font-size: 30px;
+    color: #fff;
+    padding-top: 1em;
+    text-transform: uppercase;
+}
+
+.footer h3 span {
+    color: #aaa;
 }
 
 /* INFO STYLE */

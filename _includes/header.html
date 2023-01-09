@@ -1,12 +1,10 @@
 <header class="header">
     <nav>
-        <ul class="header-nav">
-            <li><a href="/">Home</a></li>   
-            <li><a href="/js_tests/jstest1.html">Javscript tests</a></li> 
-            <li><a href="#">Nav 2</a></li> 
-            <li><a href="#">Nav 3</a></li> 
-            <li><a href="/">About</a></li> 
+        <ul class="header-nav nav-links">
+            {% include nav-links.html %}
         </ul>
     </nav>
-    <a href="/" class="header-logo">Logo</a>
+    <a href="/" class="header-logo">
+        <img src="/images/goosander2.png">
+    </a>
 </header>
