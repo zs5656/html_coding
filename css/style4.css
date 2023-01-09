@@ -94,16 +94,17 @@ blockquote {
     padding-left: 1em;
 }
 
-.header-nav a {
+.nav-links a {
     text-decoration: none;
     color: #fff;
     font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
+    list-style: none;
 }
 
-.header-nav a:hover, 
-.header-nav a:active {
+.nav-links a:hover, 
+.nav-links a:active {
     color: red;
     opacity: 0.5;
 }
@@ -125,7 +126,7 @@ blockquote {
 /* FOOTER STYLE */
 .footer {
     background-color: #000;
-    padding: 10vh 0 15vh;
+    padding: 10vh 0 10vh;
     text-align: center;
 }
 
@@ -144,18 +145,81 @@ blockquote {
     color: #aaa;
 }
 
+.footer-nav li {
+    display: inline-block;
+    margin: 2em 1em 0;
+}
+
+.footer-nav a {
+    color: #ccc;
+}
+
 /* INFO STYLE */
 .info-wrapper {
     padding: 2%;
     line-height: 1.5;
 }
 
-
 /* HERO STYLES */
 .full-hero {
     background-color: #c7dbfc;
-    padding: 2%;
-    height: 25vh;
+    padding-top: 10vh;
+    height: 100vh;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+.hero-home {
+    /* Resizing the position using anchor point center top */
+    background-position: center top;
+    background-image: url(/images/shark.jpg);
+}
+
+.hero-content {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.hero-content h1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 7vw;
+    margin-bottom: 0.25em;
+}
+
+.hero-content .social-link {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #557c83;
+}
+
+.hero-content .social-link:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* HERO AFTER AND BEFORE
+.hero-content h1::before {
+    color: blue;
+    content: 'B';
+}
+
+.hero-content h1::after {
+    color: red;
+    content: 'A';
+}
+*/
+
+.full-hero::after {
+    bottom: 2vh;
+    color: #fff;
+    content: '⌄';
+    font-size: 36px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
 }
 
 /* SOCIAL STYLE */
@@ -186,8 +250,12 @@ blockquote {
 
 .social-list {
     list-style: none;
-    padding: 0;
+    padding: 3vh 0;
     text-align: center;
+}
+
+.sfooter {
+    background-color: #000;
 }
 
 .social-list > li {
