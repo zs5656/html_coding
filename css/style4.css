@@ -44,6 +44,26 @@ blockquote {
 }
 
 /* HEADER STUFF */
+.header {
+    background-color: #aaa;
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+/* absolutely positioned positions it XXpx from the (side) */
+.header-logo {
+    background-color: #000;
+    height: 110px;
+    width: 110px;
+    left: 50%;
+    top: 50%;
+
+    /*Negative margins to put the thing in the right spot*/
+    margin: -55px 0 0 -55px;
+    position: absolute;
+}
+
 .header-nav {
     float: right;
     padding: 5vh 60px 0 0;
@@ -59,6 +79,7 @@ blockquote {
     border-left: 1px solid rgba(0, 0, 0, 0.3);
     padding-left: 1em;
 }
+
 
 .header-nav a {
     text-decoration: none;
