@@ -11,6 +11,9 @@ html {
 
 body {
     font-family: helvetica, arial, sans;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -28,6 +31,7 @@ h2 {
 
 p {
     line-height: 1.5;
+    margin: 0.75em 0;
 }
 
 /* 
@@ -50,6 +54,45 @@ blockquote {
     padding: 2px 20px; 
     background-color: grey; 
     text-align: center;
+}
+
+/* Some flex grow stuff */
+.content-container {
+    /* Short form for flex is grow, shrink, basis */
+    flex: 1 1 auto;
+    padding-top: 10vh;
+
+    /* Flex item can become a flex container */
+    display: flex;
+}
+
+
+/* COLUMN STYLES */
+.col-three {
+    display: flex;
+    flex: 1 1 0;
+}
+
+.col {
+    box-sizing: border-box;
+    padding: 2em;
+}
+
+/* this targets .col preceded by .col-three .col */
+.col-three .col ~ .col {
+    border-left: 1px solid rgba(0.1, 0.1, 0.1, 0.1)
+}
+
+.col-three .col-nav {
+    flex: 0 1 15em;
+}
+
+.col-three .col-content {
+    flex: 1 1 0;
+}
+
+.col-three .col-aside {
+    flex: 0 1 20em;
 }
 
 /* HEADER STUFF */
@@ -168,7 +211,7 @@ blockquote {
 .full-hero {
     background-color: #c7dbfc;
     padding-top: 10vh;
-    height: 100vh;
+    height: 90vh;
     box-sizing: border-box;
     background-size: cover;
 }
@@ -196,7 +239,6 @@ blockquote {
     height: 0;
     width: 0;
 }
-
 
 .hero-home {
     /* Resizing the position using anchor point center top */
@@ -253,9 +295,17 @@ blockquote {
     text-align: center;
 }
 
+.home-callout h3 {
+    color: inherit;
+    margin-top: 1em;
+}
+
 .home-callout {
     background-color: #000;
     color: #fff;
+    padding: 7vh 0;
+    align-items: center;
+    display: flex;
     padding: 7vh 0;
 }
 
@@ -263,6 +313,12 @@ blockquote {
     font-size: 5.75vw;
     text-align: right;
     text-transform: uppercase;
+    flex: 1 1 0;
+}
+
+.callout-copy {
+    flex: 0 0 45em;
+    padding: 0 3vw;
 }
 
 .callout-copy p {

@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
+
+  <!-- flexbox container -->
   <body>
+    <!-- 1st potential flexbox item, but will be FIXED -->
     {% include header.html %}
 
-    {{ content }}
+    <!-- 2nd potential flexbox item, will be FLEXED -->
+    <div class="content-container">
+        {{ content }}
+    </div>
 
+    <!-- 3rd potential flexbox item, will be FIXED-->
     {% include footer.html %}
   </body>
 </html>
