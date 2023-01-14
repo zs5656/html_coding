@@ -1,1 +1,1 @@
-alert("I fucking hate this footlong meme\nwhy did i think this was a good idea")
+alert("why did i think this was a good idea")
