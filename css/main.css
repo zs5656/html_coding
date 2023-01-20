@@ -72,7 +72,6 @@ blockquote {
     display: flex;
 }
 
-
 /* COLUMN STYLES */
 .col-three {
     display: flex;
@@ -626,4 +625,61 @@ blockquote {
 .home-section .blog-posts {
     margin: auto;
     width: 75%;
+}
+
+/* MOBILE STYLES */
+/* Apply when the screen is a certain size / attribute. Also they're at the bottom because CSS specificity likes to do its thing ;) */
+
+@media (max-width: 900px) {
+    html {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    /* HOMEPAGE STYLES */
+    .home-callout {
+        flex-direction: column;
+    }
+
+    .home-callout .callout-copy {
+        flex: 1;
+    }
+
+    .bio-box {
+        float: none;
+        font-size: 1.3rem;
+        width: auto;
+    }
+
+    /* HEADER STYLES */
+    .header-nav {
+        padding: 2vh 1em 0 0;
+    }
+
+    .header-nav > li {
+        margin-left: 0.25em;
+    }
+
+    .header-nav > li ~ li {
+        padding-left: 0.25em;
+    }
+
+    .nav-links a {
+        font-size: 3vw;
+    }
+
+    .header-logo {
+        left: auto;
+    }
+
+    /* BLOG POST STYLES */
+    .post-aside {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .half-hero {
+        display: none;
+    }
 }
