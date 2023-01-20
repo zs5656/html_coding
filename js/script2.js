@@ -13,7 +13,7 @@ username = username.toLowerCase()
 console.log(`${username}@example.com`)
 
 username = username.toUpperCase()
-console.log(username)
+console.log(`${username}@example.com`)
 
 console.log(username.charAt(3))
 console.log(username.includes("GG"))
