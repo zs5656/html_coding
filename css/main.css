@@ -540,7 +540,7 @@ blockquote {
     margin-right: 0.5em;
 }
 
-.post-header img {
+.post-header img, .recents img {
     border-radius: 99px;
     display: inline-block;
     height: 2.5em;
@@ -553,4 +553,77 @@ blockquote {
     height: 6em;
     margin-bottom: 1.5em;
     margin-top: 1.5em;
+}
+
+.post {
+    width: 100%;
+}
+
+.post-content, .post-footer {
+    margin: auto;
+    max-width: 40em;
+    width: 85vw;
+}
+
+.pull-left {
+    float: left;
+    margin: 2em 2em 2em -2%;
+}
+
+.pull-right {
+    float: left;
+    margin: 2em -2% 2em 2em;
+}
+
+.post-aside {
+    float: right;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0 0 2em 2em;
+    padding: 2em;
+}
+
+.post .post-header {
+    margin-bottom: 2.5em;
+    text-align: center;
+}
+
+.post-content {
+    font-size: 1.1rem;
+}
+
+.blog-posts .post-byline {
+    text-align: left;
+}
+
+.post-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    font-size: 0.8em;
+    margin-top: 3em;
+    padding-top: 2em;
+}
+
+.half-hero {
+    background-position: center center;
+    background-size: cover;
+    height: 40vh;
+}
+
+.home-section h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.home-section h4 {
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.home-section .post-header {
+    text-align: center;
+}
+
+.home-section .blog-posts {
+    margin: auto;
+    width: 75%;
 }
