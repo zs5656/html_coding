@@ -4,9 +4,14 @@ html, body {
     padding: 0;
 }
 
+span {
+    color: #fff;
+}
+
 html {
     box-shadow: 0 0 0 30px #000 inset;
     padding: 0 30px;
+    scrollbar-color: #454a4d #202324;
 }
 
 body {
@@ -14,6 +19,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #181a1b;
+    color: #fff;
 }
 
 h1 {
@@ -32,12 +39,17 @@ h2 {
 p {
     line-height: 1.5;
     margin: 0.75em 0;
+    color: #fff;
 }
 
 h4 {
     color: #999;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+li {
+    color: #fff;
 }
 
 /* 
@@ -60,6 +72,7 @@ blockquote {
     padding: 2px 20px; 
     background-color: grey; 
     text-align: center;
+    color: #fff;
 }
 
 /* Some flex grow stuff */
@@ -225,7 +238,7 @@ blockquote {
 
 .drop-menu:before {
     border: 0.6em solid;
-    border-color: transparent transparent #fff;
+    border-color: transparent transparent #181a1b;
     content: "";
     height: 0;
     position: absolute;
@@ -235,11 +248,11 @@ blockquote {
 }
 
 .drop-menu li {
-    background-color: #fff;
+    background-color: #181a1b;
 }
 
 .drop-menu li ~ li:hover {
-    background-color: #ccc;
+    background-color: #35393b;
 }
 
 .drop-menu li ~ li {
@@ -248,7 +261,7 @@ blockquote {
 
 .drop-menu li:first-child {
     border-radius: 5px 5px 0 0;
-    color: #000;
+    color: #fff;
     font-size: 0.5em;
     padding: 1em 1em 0.25em 1em;
     text-align: right;
@@ -260,7 +273,7 @@ blockquote {
 }
 
 .drop-menu a {
-    color: #000;
+    color: #fff;
     display: block;
     font-weight: normal;
     padding: 0.5em 2em 0.5em 1em;
@@ -270,7 +283,7 @@ blockquote {
 }
 
 .drop-menu a:hover {
-    color: #000;
+    color: #8f908f;
 }
 
 span.drop-trigger {
@@ -278,7 +291,7 @@ span.drop-trigger {
 }
 
 .footer span.drop-trigger {
-    color: #ccc;
+    color: #C8C3BC;
 }
 
 /* FOOTER DROPDOWN STYLES */
@@ -292,7 +305,7 @@ span.drop-trigger {
 }
 
 .footer .drop-trigger:after {
-    border-color: transparent transparent #fff;
+    border-color: transparent transparent #C8C3BC;
 }
 
 .footer .drop-menu {
@@ -308,7 +321,7 @@ span.drop-trigger {
 
 .footer .drop-menu::after {
     border: 0.6em solid;
-    border-color: #fff transparent transparent;
+    border-color: #181a1b transparent transparent;
     content: "";
     height: 0;
     position: absolute;
@@ -323,7 +336,12 @@ span.drop-trigger {
 }
 
 .footer .drop-menu a {
-    color: #000;
+    color: #fff;
+}
+
+.footer-nav > li.dropdown {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* FOOTER STYLE */
@@ -354,7 +372,7 @@ span.drop-trigger {
 }
 
 .footer-nav a {
-    color: #ccc;
+    color: #C8C3BC;
 }
 
 /* INFO STYLE */
@@ -386,7 +404,7 @@ span.drop-trigger {
 
 .full-hero::after {
     border: 10px solid;
-    border-color: #fff transparent transparent;
+    border-color: rgb(48, 52, 54) transparent transparent;
     bottom: 2vh;
     content: "";
     left: 50%;
@@ -418,8 +436,8 @@ span.drop-trigger {
 }
 
 .hero-content .social-link {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #557c83;
+    background-color: rgba(24, 26, 27, 0.8);
+    color: rgb(164, 156, 144);
 }
 
 .hero-content .social-link:hover {
@@ -485,7 +503,7 @@ span.drop-trigger {
 
 .social-link {
     /* Use RGBa to set transparency. 0 is transparent and 1 is opaque */
-    background: rgba(150, 150, 150, 0.5);
+    background: rgba(83, 90, 94, 0.5);
     border-radius: 99px;
     box-sizing: border-box;
     color: #fff;
@@ -503,8 +521,9 @@ span.drop-trigger {
 }
 
 .social-link:hover {
-    color: #060;
+    color: #63b364;
     opacity: 0.5;
+    background-color: #27292b;
 }
 
 .social-list {
@@ -525,7 +544,7 @@ span.drop-trigger {
 /* BIO STYLES */
 
 .bio-wrapper {
-    background-color: #c7dbfc;
+    background-color: #292c2e;
     font-size: 24px;
     overflow: hidden;
     width: 100%;
