@@ -1,34 +1,30 @@
 <li><a href="/">Home</a></li>   
 <li><a href="{{ site.posts.first.url }}">Newest Post</a></li> 
 
+{% assign mydocs = site.posts | group_by: 'category' %}
+{% for cat in mydocs %}
 <li class="dropdown">
-   <a class="drop-trigger" href="/blog/">Blog</a>
+   <a class="drop-trigger" href="/blog/">{{ cat.name | capitalize }}</a>
    <ul class="drop-menu">
-      <li>Recent Posts</li>
-      {% for post in site.posts limit:5 %}
-         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li>{{ cat.name }}</li>
+      {% assign items = cat.items | sort: 'order' %}
+      {% for item in items %}
+         <li><a href="{{ item.url }}">{{ item.title }}</a></li>
       {% endfor %}
    </ul>
 </li>
+{% endfor %}
 
+{% for item in site.data.navigation.toc %}
 <li class="dropdown">
-   <span class="drop-trigger" href="">gallery</span>
-   
+   <span class="drop-trigger" href="">{{ item.title }}</span>
    <ul class="drop-menu">
-      <li>Recent Galleries</li>
-         <li><a href="/gallery/footlongs.html">Melon</a></li>
-         <li><a href="/gallery/index.html">Gallery Tests</a></li>
+      <li>{{ item.title }}</li>
+      {% for entry in item.subfolderitems %}
+         <li><a href="{{ entry.url }}">{{ entry.page }}</a></li>
+      {% endfor %}
    </ul>
 </li>
-
-<li class="dropdown">
-   <span class="drop-trigger">Projects</span>
-   <ul class="drop-menu">
-      <li>Recent Projects</li>
-         <li><a href="#">RSA encryption</a></li>
-         <li><a href="#">Projectile Motion</a></li>
-   </ul>
-</li>
-
+{% endfor %}
 
 <li><a href="/">About</a></li> 

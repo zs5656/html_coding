@@ -186,7 +186,6 @@ a.unclickable {
     opacity: 0.5;
 }
 
-
 /* Target the first link using the first-child */
 
 .header-nav > li:first-child a,
@@ -660,6 +659,22 @@ a.unclickable {
 
 .col-two .col-content {
     flex: 1 1 0;
+}
+
+span.category {
+    padding: 1%;
+    border-radius: 5px;
+    margin-right: 0.25vw;
+}
+
+span.category.projects {
+    background: red;
+    border: 1px solid red;
+}
+
+span.category.blog {
+    background: orangered;
+    border: 1px solid orangered;
 }
 
 .page {

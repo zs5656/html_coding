@@ -18,6 +18,7 @@ title: Blog Home
                         <a href="{{ post.authorTwitter }}" class="social-link">
                             <i class="fab fa-twitter"></i>
                         </a>
+                        <span class="category {{ post.category }}">{{ post.category }}</span>
                         by: {{ post.author }}
                         <span> - {{ post.date | date: '%B %d, %Y'}} </span>
                     </div>
