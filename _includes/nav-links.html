@@ -17,7 +17,7 @@
 
 {% for item in site.data.navigation.toc %}
 <li class="dropdown">
-   <span class="drop-trigger" href="">{{ item.title }}</span>
+   <a class="drop-trigger" href="{{ item.url }}">{{ item.title }}</a>
    <ul class="drop-menu">
       <li>{{ item.title }}</li>
       {% for entry in item.subfolderitems %}

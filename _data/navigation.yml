@@ -1,7 +1,8 @@
 toc:
   - title: Gallery
+    url: /gallery/index.html
     subfolderitems:
       - page: Melon
         url: /gallery/footlongs.html
       - page: Gallery Tests
-        url: /gallery/flower.html
+        url: /gallery/index.html

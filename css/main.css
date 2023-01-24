@@ -743,7 +743,7 @@ span.category.blog {
 .posts-image {
     background-position: center;
     background-size: cover;
-    height: 6em;
+    height: 10em;
     margin-bottom: 1.5em;
     margin-top: 1.5em;
 }

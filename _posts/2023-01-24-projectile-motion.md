@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Projectile Simulation
-postHero: /images/shark.jpg
+postHero: /images/yeet.png
 gravatar: /images/logo3.png
 author: z5656
 authorTwitter: https://twitter.com/mhartl
