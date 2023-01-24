@@ -789,7 +789,7 @@ span.category.blog {
 }
 
 .post-footer {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(203, 198, 189, 0.5);
     font-style: italic;
     font-size: 0.8em;
     margin-top: 3em;
