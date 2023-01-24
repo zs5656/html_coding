@@ -81,6 +81,10 @@ blockquote {
     color: #fff;
 }
 
+a.unclickable {
+    cursor: not-allowed;
+}
+
 /* Some flex grow stuff */
 .content-container {
     /* Short form for flex is grow, shrink, basis */
@@ -175,10 +179,13 @@ blockquote {
 }
 
 .nav-links a:hover, 
-.nav-links a:active {
+.nav-links a:active,
+.nav-links span:hover, 
+.nav-links span:active {
     color: red;
     opacity: 0.5;
 }
+
 
 /* Target the first link using the first-child */
 
