@@ -1,9 +1,17 @@
 toc:
   - title: Gallery
-    url: /gallery/index.html
+    url: #
     onclick: return false;
     subfolderitems:
       - page: Melon
         url: /gallery/footlongs.html
       - page: Gallery Tests
         url: /gallery/flower.html
+  - title: Projects
+    url: #
+    onclick: return false;
+    subfolderitems:
+      - page: RSA Simulation
+        url: https://github.com/zs5656/cmaths_simplified
+      - page: Projectile Motion
+        url: /js/projectile/home.html

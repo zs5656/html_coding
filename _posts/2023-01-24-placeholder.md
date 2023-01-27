@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Projectile Simulation
+title: placeholder
 postHero: /images/yeet.png
 gravatar: /images/logo3.png
 author: z5656
 authorTwitter: https://twitter.com/mhartl
 postFooter: Additional information, and maybe a <a href="#">link or two</a>
 
-category: projects
+category: placeholder
 order: 2
 
 excerpt: XXXX

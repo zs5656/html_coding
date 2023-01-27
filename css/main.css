@@ -825,6 +825,20 @@ span.category.blog {
     display: none;
 }
 
+/* PROJECTILE MOTION PAGE */
+.projectile {
+    flex-direction: column;
+    text-align: center;
+    margin: 5vh;
+}
+
+.calculator {
+    width: 90vw; 
+    height: 70vh; 
+    padding: 5vh;
+    display: none;
+}
+
 /* MOBILE STYLES */
 /* Apply when the screen is a certain size / attribute. Also they're at the bottom because CSS specificity likes to do its thing ;) */
 

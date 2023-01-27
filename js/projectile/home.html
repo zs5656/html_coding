@@ -1,395 +1,71 @@
 ---
 layout: default
 ---
-<head>
-  <link rel="icon" href="../images/logo3.png">
-  <title>physics</title>
-  <script src="physics.js"></script>
-  <script src="https://www.desmos.com/api/v1.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
-</head>
+<script src="physics.js"></script>
+<script src="https://www.desmos.com/api/v1.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 
-<button onclick="Input()" id="button3">Input parameters</button>
-<button onclick="window.location.reload();">Refresh Page</button>
-<button onclick="generateGraph()">Generate the graphs</button>
-<br><br>
-<p><u>Parameters to input:</u>
-  <br>Initial velocity
-  <br>Initial height
-  <br>Angle of Launch
-</p>
-<p>UUUUUUGH IM DOING THIS SHIT TMR</p>
+<div class="projectile">
+  <div class="inputs">
+    <button onclick="Input()" id="button3">Input parameters</button>
+    <button onclick="window.location.reload();">Refresh Page</button>
+    <button onclick="generateGraph()">Generate the graphs</button>
+  
+    <p><u>Parameters to input:</u> velocity, Initial height, Angle of Launch</p>
+  </div>
+  
+  <div class="calculator "id="calculator"></div>
+  
+  <div class="table">
+    <table>
+      <tbody>
+        <tr>
+          <th>Graph No:</th>
+          <th>Angle of launch</th>
+          <th>Starting Velocity</th>
+          <th>Intial height of launch</th>
+          <th>Horizontal Velocity</th>
+          <th>Vertical Velocity</th>
+          <th>Time Of Flight</th>
+          <th>Distance projectile reaches<br>First x-intercept</th>
+          <th>Maximum height, x value<br>Turning point, x value</th>
+          <th>Maximum height of projectile<br>Turning point, y value</th>
+          <th>Time at which maximum height is reached</th>
+        </tr>
+        
+        {% for i in (1..18) %}
+        <tr>
+          <td id="no">{{i}}</td>
+          <td id="ang{{i}}"></td>
+          <td id="v{{i}}"></td>
+          <td id="c{{i}}"></td>
+          <td id="vx{{i}}"></td>
+          <td id="vy{{i}}"></td>
+          <td id="tof{{i}}"></td>
+          <td id="s{{i}}"></td>
+          <td id="h{{i}}"></td>
+          <td id="k{{i}}"></td>
+          <td id="tt{{i}}"></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
 
-<div id="calculator" class="center" style="width: 1200px; height: 800px;"></div>
-
-<table class="t2">
-  <tbody>
-    <tr class="t2">
-      <th class="t2">Graph No:</th>
-      <th class="t2">Angle of launch</th>
-      <th class="t2">Starting Velocity</th>
-      <th class="t2">Intial height of launch</th>
-      <th class="t2">Horizontal Velocity</th>
-      <th class="t2">Vertical Velocity</th>
-      <th class="t2">Time Of Flight</th>
-      <th class="t2">Distance projectile reaches<br>First x-intercept</th>
-      <th class="t2">Maximum height, x value<br>Turning point, x value</th>
-      <th class="t2">Maximum height of projectile<br>Turning point, y value</th>
-      <th class="t2">Time at which maximum height is reached</th>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">1</td>
-      <td class="t2" id="ang1"></td>
-      <td class="t2" id="v1"></td>
-      <td class="t2" id="c1"></td>
-      <td class="t2" id="vx1"></td>
-      <td class="t2" id="vy1"></td>
-      <td class="t2" id="tof1"></td>
-      <td class="t2" id="s1"></td>
-      <td class="t2" id="h1"></td>
-      <td class="t2" id="k1"></td>
-      <td class="t2" id="tt1"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">2</td>
-      <td class="t2" id="ang2"></td>
-      <td class="t2" id="v2"></td>
-      <td class="t2" id="c2"></td>
-      <td class="t2" id="vx2"></td>
-      <td class="t2" id="vy2"></td>
-      <td class="t2" id="tof2"></td>
-      <td class="t2" id="s2"></td>
-      <td class="t2" id="h2"></td>
-      <td class="t2" id="k2"></td>
-      <td class="t2" id="tt2"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">3</td>
-      <td class="t2" id="ang3"></td>
-      <td class="t2" id="v3"></td>
-      <td class="t2" id="c3"></td>
-      <td class="t2" id="vx3"></td>
-      <td class="t2" id="vy3"></td>
-      <td class="t2" id="tof3"></td>
-      <td class="t2" id="s3"></td>
-      <td class="t2" id="h3"></td>
-      <td class="t2" id="k3"></td>
-      <td class="t2" id="tt3"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">4</td>
-      <td class="t2" id="ang4"></td>
-      <td class="t2" id="v4"></td>
-      <td class="t2" id="c4"></td>
-      <td class="t2" id="vx4"></td>
-      <td class="t2" id="vy4"></td>
-      <td class="t2" id="tof4"></td>
-      <td class="t2" id="s4"></td>
-      <td class="t2" id="h4"></td>
-      <td class="t2" id="k4"></td>
-      <td class="t2" id="tt4"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">5</td>
-      <td class="t2" id="ang5"></td>
-      <td class="t2" id="v5"></td>
-      <td class="t2" id="c5"></td>
-      <td class="t2" id="vx5"></td>
-      <td class="t2" id="vy5"></td>
-      <td class="t2" id="tof5"></td>
-      <td class="t2" id="s5"></td>
-      <td class="t2" id="h5"></td>
-      <td class="t2" id="k5"></td>
-      <td class="t2" id="tt5"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">6</td>
-      <td class="t2" id="ang6"></td>
-      <td class="t2" id="v6"></td>
-      <td class="t2" id="c6"></td>
-      <td class="t2" id="vx6"></td>
-      <td class="t2" id="vy6"></td>
-      <td class="t2" id="tof6"></td>
-      <td class="t2" id="s6"></td>
-      <td class="t2" id="h6"></td>
-      <td class="t2" id="k6"></td>
-      <td class="t2" id="tt6"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">7</td>
-      <td class="t2" id="ang7"></td>
-      <td class="t2" id="v7"></td>
-      <td class="t2" id="c7"></td>
-      <td class="t2" id="vx7"></td>
-      <td class="t2" id="vy7"></td>
-      <td class="t2" id="tof7"></td>
-      <td class="t2" id="s7"></td>
-      <td class="t2" id="h7"></td>
-      <td class="t2" id="k7"></td>
-      <td class="t2" id="tt7"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">8</td>
-      <td class="t2" id="ang8"></td>
-      <td class="t2" id="v8"></td>
-      <td class="t2" id="c8"></td>
-      <td class="t2" id="vx8"></td>
-      <td class="t2" id="vy8"></td>
-      <td class="t2" id="tof8"></td>
-      <td class="t2" id="s8"></td>
-      <td class="t2" id="h8"></td>
-      <td class="t2" id="k8"></td>
-      <td class="t2" id="tt8"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">9</td>
-      <td class="t2" id="ang9"></td>
-      <td class="t2" id="v9"></td>
-      <td class="t2" id="c9"></td>
-      <td class="t2" id="vx9"></td>
-      <td class="t2" id="vy9"></td>
-      <td class="t2" id="tof9"></td>
-      <td class="t2" id="s9"></td>
-      <td class="t2" id="h9"></td>
-      <td class="t2" id="k9"></td>
-      <td class="t2" id="tt9"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">10</td>
-      <td class="t2" id="ang10"></td>
-      <td class="t2" id="v10"></td>
-      <td class="t2" id="c10"></td>
-      <td class="t2" id="vx10"></td>
-      <td class="t2" id="vy10"></td>
-      <td class="t2" id="tof10"></td>
-      <td class="t2" id="s10"></td>
-      <td class="t2" id="h10"></td>
-      <td class="t2" id="k10"></td>
-      <td class="t2" id="tt10"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">11</td>
-      <td class="t2" id="ang11"></td>
-      <td class="t2" id="v11"></td>
-      <td class="t2" id="c11"></td>
-      <td class="t2" id="vx11"></td>
-      <td class="t2" id="vy11"></td>
-      <td class="t2" id="tof11"></td>
-      <td class="t2" id="s11"></td>
-      <td class="t2" id="h11"></td>
-      <td class="t2" id="k11"></td>
-      <td class="t2" id="tt11"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">12</td>
-      <td class="t2" id="ang12"></td>
-      <td class="t2" id="v12"></td>
-      <td class="t2" id="c12"></td>
-      <td class="t2" id="vx12"></td>
-      <td class="t2" id="vy12"></td>
-      <td class="t2" id="tof12"></td>
-      <td class="t2" id="s12"></td>
-      <td class="t2" id="h12"></td>
-      <td class="t2" id="k12"></td>
-      <td class="t2" id="tt12"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">13</td>
-      <td class="t2" id="ang13"></td>
-      <td class="t2" id="v13"></td>
-      <td class="t2" id="c13"></td>
-      <td class="t2" id="vx13"></td>
-      <td class="t2" id="vy13"></td>
-      <td class="t2" id="tof13"></td>
-      <td class="t2" id="s13"></td>
-      <td class="t2" id="h13"></td>
-      <td class="t2" id="k13"></td>
-      <td class="t2" id="tt13"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">14</td>
-      <td class="t2" id="ang14"></td>
-      <td class="t2" id="v14"></td>
-      <td class="t2" id="c14"></td>
-      <td class="t2" id="vx14"></td>
-      <td class="t2" id="vy14"></td>
-      <td class="t2" id="tof14"></td>
-      <td class="t2" id="s14"></td>
-      <td class="t2" id="h14"></td>
-      <td class="t2" id="k14"></td>
-      <td class="t2" id="tt14"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">15</td>
-      <td class="t2" id="ang15"></td>
-      <td class="t2" id="v15"></td>
-      <td class="t2" id="c15"></td>
-      <td class="t2" id="vx15"></td>
-      <td class="t2" id="vy15"></td>
-      <td class="t2" id="tof15"></td>
-      <td class="t2" id="s15"></td>
-      <td class="t2" id="h15"></td>
-      <td class="t2" id="k15"></td>
-      <td class="t2" id="tt15"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">16</td>
-      <td class="t2" id="ang16"></td>
-      <td class="t2" id="v16"></td>
-      <td class="t2" id="c16"></td>
-      <td class="t2" id="vx16"></td>
-      <td class="t2" id="vy16"></td>
-      <td class="t2" id="tof16"></td>
-      <td class="t2" id="s16"></td>
-      <td class="t2" id="h16"></td>
-      <td class="t2" id="k16"></td>
-      <td class="t2" id="tt16"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">17</td>
-      <td class="t2" id="ang17"></td>
-      <td class="t2" id="v17"></td>
-      <td class="t2" id="c17"></td>
-      <td class="t2" id="vx17"></td>
-      <td class="t2" id="vy17"></td>
-      <td class="t2" id="tof17"></td>
-      <td class="t2" id="s17"></td>
-      <td class="t2" id="h17"></td>
-      <td class="t2" id="k17"></td>
-      <td class="t2" id="tt17"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">18</td>
-      <td class="t2" id="ang18"></td>
-      <td class="t2" id="v18"></td>
-      <td class="t2" id="c18"></td>
-      <td class="t2" id="vx18"></td>
-      <td class="t2" id="vy18"></td>
-      <td class="t2" id="tof18"></td>
-      <td class="t2" id="s18"></td>
-      <td class="t2" id="h18"></td>
-      <td class="t2" id="k18"></td>
-      <td class="t2" id="tt18"></td>
-    </tr>
-  </tbody>
-</table>
-<br><br>
-
-<!-- This section holds the equations of the graph. -->
-
-<table class="t2">
-  <tbody>
-    <tr class="t2">
-      <th class="t2">Graph No: </th>
-      <th class="t2">Equation in completed square form</th>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">1</td>
-      <td class="t2" id="eqc1"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">2</td>
-      <td class="t2" id="eqc2"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">3</td>
-      <td class="t2" id="eqc3"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">4</td>
-      <td class="t2" id="eqc4"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">5</td>
-      <td class="t2" id="eqc5"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">6</td>
-      <td class="t2" id="eqc6"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">7</td>
-      <td class="t2" id="eqc7"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">8</td>
-      <td class="t2" id="eqc8"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">9</td>
-      <td class="t2" id="eqc9"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">10</td>
-      <td class="t2" id="eqc10"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">11</td>
-      <td class="t2" id="eqc11"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">12</td>
-      <td class="t2" id="eqc12"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">13</td>
-      <td class="t2" id="eqc13"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">14</td>
-      <td class="t2" id="eqc14"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">15</td>
-      <td class="t2" id="eqc15"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">16</td>
-      <td class="t2" id="eqc16"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">17</td>
-      <td class="t2" id="eqc17"></td>
-    </tr>
-
-    <tr class="t2">
-      <td class="t2" id="no">18</td>
-      <td class="t2" id="eqc18"></td>
-    </tr>
-  </tbody>
-</table>
-
+    <br><br>
+    
+    <table>
+      <tbody>
+        <tr>
+          <th>Graph No: </th>
+          <th>Equation in completed square form</th>
+        </tr>
+        
+        {% for i in (1..18) %}
+        <tr>
+          <td id="no">{{i}}</td>
+          <td id="eqc{{i}}"></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>  
+  </div>  
+</div>
