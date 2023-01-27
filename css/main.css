@@ -885,7 +885,7 @@ span.category.blog {
     }
 
     .gallery .gallery-thumbs {
-        flex: 1 1 0;
+        flex: 1 1 10vh;
         height: auto;
         white-space: nowrap;
         width: 100vw;
