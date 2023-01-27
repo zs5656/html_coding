@@ -14,5 +14,3 @@ excerpt: XXXX
 ---
 
 RSA STUFF WOOOOP
-
-<img class="pull-left" src="../gallery/images/goosander2.png">
