@@ -36,9 +36,16 @@ function ToRad(ang) {
   return ang * (Math.PI / 180);
 }
 
+function removeCalculator() {
+  const nodeList = document.querySelectorAll(".dcg-wrapper");
+  for (let i = 0; i < nodeList.length; i++) {
+    nodeList[i].remove();
+  }
+  document.getElementById("calculator").style.display = "none";
+}
+
 function generateGraph() {
-  var response = prompt("IF YOU WISH TO PROCEED TYPE 1 AND PRESS ENTER OTHERWISE PRESS CANCEL")
-  if (response == 1 && act == 0) {
+  if (act == 0) {
     document.getElementById("calculator").style.display = "block"; 
     var elt = document.getElementById('calculator');
     var calculator = Desmos.GraphingCalculator(elt);
@@ -48,6 +55,8 @@ function generateGraph() {
     }
     act++;
   } else {
-    alert("The graph generation has been cancelled. Feel free to add more graphs.")
+    removeCalculator();
+    act--;
+    generateGraph();
   }
 }

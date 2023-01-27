@@ -8,21 +8,20 @@ layout: default
   <div class="inputs">
     <button onclick="Input()" id="button3">Input parameters</button>
     <button onclick="window.location.reload();">Refresh Page</button>
-    <button onclick="generateGraph()">Generate the graphs</button>
-  
+    <button onclick="generateGraph()">Generate the graphs</button>    
     <p><u>Parameters to input:</u> velocity, Initial height, Angle of Launch</p>
   </div>
   
   <div class="calculator "id="calculator"></div>
   
   <div class="table">
-    <table>
+    <table class="t2 large-table">
       <tbody>
         <tr>
-          <th>Graph No:</th>
+          <th>No:</th>
           <th>Angle of launch</th>
           <th>Starting Velocity</th>
-          <th>Intial height of launch</th>
+          <th>Height of launch</th>
           <th>Horizontal Velocity</th>
           <th>Vertical Velocity</th>
           <th>Time Of Flight</th>
@@ -49,10 +48,8 @@ layout: default
         {% endfor %}
       </tbody>
     </table>
-
-    <br><br>
     
-    <table>
+    <table class="t2 small-table">
       <tbody>
         <tr>
           <th>Graph No: </th>

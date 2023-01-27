@@ -833,10 +833,42 @@ span.category.blog {
 }
 
 .calculator {
-    width: 90vw; 
+    width: 90%; 
     height: 70vh; 
     padding: 5vh;
     display: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.t2 {
+    margin-top: 2.5vh;
+    border: 1px solid rgb(107, 118, 122);
+}
+
+table th {
+    background-color: red;
+}
+
+table tr td, table th {
+    padding: 0.5625em 0.625em;
+}  
+
+table td {
+    text-align: left;
+}
+
+tr:nth-child(2n) {
+    background-color: rgb(36, 39, 41);
+}
+
+tr:nth-child(2n + 1) {
+    background-color: rgb(24, 26, 27);
+}
+
+table tr {
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9vw;
 }
 
 /* MOBILE STYLES */
@@ -1012,4 +1044,3 @@ span.category.blog {
         display: none;
     }
 }
-
