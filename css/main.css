@@ -867,8 +867,30 @@ tr:nth-child(2n + 1) {
 }
 
 table tr {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #3a3e41;
     font-size: 0.9vw;
+}
+
+button {
+    background-color: #a30000;
+    padding: 0.5em 1em;
+    border: 1px solid #c90000;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Ubuntu', helvetica, arial, sans;
+}
+
+button:hover {
+    background-color: #5d0101;
+}
+
+button:active {
+    background-color: #5d0101;
+    opacity: 0.5;
+}
+
+button ~ button {
+    margin-left: 1em;
 }
 
 /* MOBILE STYLES */

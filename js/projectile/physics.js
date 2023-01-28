@@ -50,7 +50,7 @@ function generateGraph() {
     var elt = document.getElementById('calculator');
     var calculator = Desmos.GraphingCalculator(elt);
 
-    for(let xy = 1; xy < 19; xy++) {
+    for(let xy = 1; xy < 21; xy++) {
       calculator.setExpression({id: `graph${xy}`, latex: document.getElementById(`eqc${xy}`).textContent});
     }
     act++;
