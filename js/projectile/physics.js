@@ -5,13 +5,12 @@ function Input(){
   var ang = parseFloat(prompt("What is the angle of launch\nInput in degrees only")); 
   var v = parseFloat(prompt("What is the inital velocity of the projectile\nInput in m/s"));
   var c = parseFloat(prompt("What is the inital height the projectile is thrown from\nInput in metres")); 
-  
-  var g = 10; //Here the code sets acceleration due to gravity to 10, but it can be changed to 9.81
+
+  var g = 9.81; //Here the code sets acceleration due to gravity to 9.81
   var vy = v * Math.sin(ToRad(ang)); //Calculates the vertical velocity component
   var vx = v * Math.cos(ToRad(ang)); //Calculates the horizontal velocity component
   var tof = (vy + Math.sqrt(vy * vy + 2 * g * c)) / g; //time of flight
   var k = c + ((vy * vy) / (2 * g)); //maximum height (k)
-  var ss = Math.pow(s, 2);
   var tt = (vy / g); //reaches maximum height at this time
   var h = vx * tt; //max height at x value
   var a = (c - k) / (h * h); 
@@ -28,7 +27,7 @@ function Input(){
   document.getElementById("k" + xy).innerHTML = k;
   document.getElementById("tt" + xy).innerHTML = tt;
   document.getElementById("h" + xy).innerHTML = h;
-  document.getElementById("eqc" + xy).innerHTML = `y=${a}(x-${h})^2+${k}`;
+  document.getElementById("eqc" + xy).innerHTML = `y=${a}(x-${h})^2+${k}, "{x > 0}"`;
   xy++;
 }
 
