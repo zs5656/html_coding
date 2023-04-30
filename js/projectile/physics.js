@@ -27,7 +27,8 @@ function Input(){
   document.getElementById("k" + xy).innerHTML = k;
   document.getElementById("tt" + xy).innerHTML = tt;
   document.getElementById("h" + xy).innerHTML = h;
-  document.getElementById("eqc" + xy).innerHTML = `y=${a}(x-${h})^2+${k}, "{x > 0}"`;
+
+  document.getElementById("eqc" + xy).innerHTML = `y=${a}(x-${h})^2+${k}`;
   xy++;
 }
 
